@@ -40,9 +40,70 @@ int main(){
 
     
   }
-  
 
-  
-
-  
 }
+
+  //<QUESTION2>
+
+  /*
+  Write a program to print the following pattern:
+
+Copy code
+3 2 1
+3 2 1
+Explanation:
+
+The pattern has 2 rows.
+Each row contains numbers starting from 3 and decreasing to 1.
+    */
+
+/* <ANSWER 2>
+#include<iostream>
+using namespace std;
+int main(){
+  cout<<"solve pattern 3,2,1"<<endl;
+  int n;
+  cin>>n;
+  cout<<"your starting number is : "<<n<<endl;
+
+  int i = 0;
+
+
+  while(i<n){
+
+    int j = 0;
+    while(j<n){
+      
+      
+      
+      int x ;
+      x = n-j;
+      
+      cout<<x<<" ";
+      j=j+1;
+
+
+
+    }
+
+    cout<<endl;
+    i=i+1;
+    
+    
+  }
+
+  
+    
+  
+
+  
+  
+ 
+}
+*/
+  
+
+  
+
+  
+
