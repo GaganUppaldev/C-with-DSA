@@ -30,3 +30,36 @@ int main(){
          
          
 }
+/*
+// find power b of a means a^b
+#include <iostream>
+using namespace std;
+
+int power(int a ,int b){
+         int sol = 1;
+         for (int i=1;i<=b;i++){
+                  
+                  sol= sol*a;
+         }
+         return sol;
+}
+
+
+
+int main(){
+         int a ;
+         int b ;
+         cout<<"print the integer a"<<endl;
+         cin>>a;
+         cout<<a<<"  is your interger"<<endl;
+         cin>>b;
+         cout<<b<<"  is  power of integer "<<a<<endl;
+         //function calling
+         int fin = power(a,b);
+         cout<<fin<<endl;
+         
+         
+         
+         
+}
+*/
