@@ -171,8 +171,42 @@ int main() {
 }
   */
   
+//=====================================================================================================================================
+/* HERE IS EXPLANATION IN SOME LOGICAL WAY FOR SEMI-PYRAMID PATTRENS WITH BOTH NUMBER AND *
 
-  
+#include <iostream>
+using namespace std;
 
-  
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    int n ;
+    cin>>n;
+
+    for(int i = 1;i<=n;i++){ //this is number of times row print
+        
+        for(int j =1;j<=i;j++){ //this is for element inside row print which is here equal to number of row and row is increaing
+            cout<<"*"<<"";
+        }
+        cout<<endl;
+    }
+
+    int rows;
+    cin>>rows;
+    
+    for(int i =1;i <= rows;i++){ // i = rows
+        for(int j =1;j<=i;j++){ //j = number of element inside row , j=i and i = number of rows
+            cout<<i<<" ";
+            
+        }
+        cout<<endl;
+        
+    }
+    
+}
+  */
 
