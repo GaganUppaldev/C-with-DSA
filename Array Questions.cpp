@@ -80,3 +80,42 @@ print(arr,size);
 
 }
 */
+//=======================================================================================================================================
+/*<OUESTION> Finding muliple elements from an array 
+
+I BUILT LOGIC MYSELF BUT I HAD A EXEPTION IN DETERMING WEATHER FIRST ELEMENT HAVE MULTIPLE OR NOT BUT STILL CODE WORLED WELL FOR REST SO I AM ADDIN
+ING IT HERE
+
+#include <iostream>
+using namespace std;
+int main(){
+  
+  int arr[3] = {1,2,1};
+  int size;
+  size = sizeof(arr)/sizeof(int);
+  cout<<size<<endl;
+
+  for(int i=0;i<=size-1;i++){
+    cout<<arr[i]<<endl;
+    int first = 0;
+    int final = arr[first]^arr[i];
+    cout<<final<<endl;
+    if(final==0){
+      cout<<"Duplicate element is "<<arr[i]<<" "<<i<<endl;
+    }
+    else{
+      cout<<"No duplicate element at index "<<i<<endl;
+    }
+  }
+}
+    
+
+
+
+
+
+
+
+
+
+*/
