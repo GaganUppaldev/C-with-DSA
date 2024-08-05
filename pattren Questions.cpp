@@ -209,4 +209,55 @@ int main() {
     
 }
   */
+//=======================================================================================================================================
+/* <OUESTION 6 > 
+Printing half pyramid using Alphabets
+a 
+b b 
+c c c 
+d d d d 
+
+TO solve this we need a logic or understanding of conversion  so here is logic understand it first 
+   
+    char b = 'd';
+    int c = b - 'a' + 1;
+    cout << c<<endl; 
+
+    char final ;
+    final = 'a' + c - 1;
+    cout<<final;
+
+<ANSWER> 
+#include <iostream>
+using namespace std;
+
+int main() {
+    
+    char input;
+    char a = 'a';
+
+    cout << "Enter character for last row: ";
+    cin>>input;
+
+    for(int i = 1;i<=input-'a'+1;i++){   //for row
+        for(int j = 1 ; j<=i; j++){ //for number of times element will print
+            cout<<a<<" ";
+        }
+        cout<<endl;
+        a++;
+    }
+    
+ 
+
+
+
+   
+    
+    
+    
+    
+    
+    
+    */
+
 
