@@ -157,7 +157,35 @@ int main() {
   }
 
 
+=======================(XOR METHOD)
 
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[5] = {1, 2, 3, 4, 3}; // array with one duplicate
+    int size = sizeof(arr) / sizeof(int);
+
+    int xor_all_elements = 0;
+    int xor_1_to_n_minus_1 = 0;
+
+    // XOR all elements in the array
+    for (int i = 0; i < size; i++) {
+        xor_all_elements ^= arr[i];
+    }
+
+    // XOR all numbers from 1 to n-1
+    for (int i = 1; i <= size - 1; i++) {
+        xor_1_to_n_minus_1 ^= i;
+    }
+
+    // The result is the duplicate element
+    int duplicate = xor_all_elements ^ xor_1_to_n_minus_1;
+
+    cout << "Duplicate element: " << duplicate << endl;
+
+    return 0;
+}
 
 
 
