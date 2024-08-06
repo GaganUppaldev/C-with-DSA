@@ -81,7 +81,7 @@ print(arr,size);
 }
 */
 //=======================================================================================================================================
-/*<OUESTION> Finding muliple elements from an array 
+/*<OUESTION 1> Finding muliple elements from an array 
 
 I BUILT LOGIC MYSELF BUT I HAD A EXEPTION IN DETERMING WEATHER FIRST ELEMENT HAVE MULTIPLE OR NOT BUT STILL CODE WORLED WELL FOR REST SO I AM ADDIN
 ING IT HERE
@@ -129,7 +129,32 @@ int main() {
 
     return 0;
 }
+========================================================================================================================================
+<QUESTION  2 > 
+FINDING A DUBILCATE ELEMENT FROM AN ARRAY WHERE ELEMENTS ARE FROM N TO N-1 AND ALL INTEGERS only one pair is dublicate and rest are 
+differrent 
+WE CAN SOLVE IT WITH TWO APPROACHES AND HERE ARE BOTH
 
+//SOLVING WITH LINEAR SEARCH
+#include <iostream>
+using namespace std;
+
+int main() {
+
+  int arr[5] = {1,2,3,4,3};//n-1
+
+  //finding dubilcate 
+  //linear search 
+
+  for(int i=0;i<5;i++){
+    for(int j=i+1;j<5;j++){
+      if(arr[i]==arr[j]){
+        cout<<arr[i]<<" is dublicate sir"<<endl;
+      }
+    }
+    
+    
+  }
 
 
 
