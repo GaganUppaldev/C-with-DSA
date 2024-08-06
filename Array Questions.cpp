@@ -187,6 +187,32 @@ int main() {
     return 0;
 }
 
+=========================================================================================================================================
+<OUESTION 3> PAIR SUM 
+FIND PAIR OF TWO ELEMENTS FORM AN ARRAY int arr ={1,2,3,4,5} WHOOSE SUM IS EQUAL TO = 5
 
+<SOLUTION>
+#include <iostream>
+using namespace std;
 
+int main() {
+
+  
+
+  int arr[5] = {1,2,3,4,5};
+  int size = sizeof(arr)/sizeof(int);
+
+  int goal = 5;
+  // i = 0 ; j =1 ---> size 
+  for ( int i = 0 ; i < size ; i++ ){
+    for ( int j = i+1 ; j < size ; j++ ){
+      int result = arr[i] + arr[j];
+      if ( result == goal ){
+        cout<<arr[i]<<" and  "<<arr[j]<<" pair sum is "<<result<<endl;
+      }
+      
+    }
+  }
+    
+}
 */
