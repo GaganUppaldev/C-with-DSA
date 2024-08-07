@@ -216,3 +216,33 @@ int main() {
     
 }
 */
+
+//======================================================================================================================================
+//<Question 4>
+// Find out maximum element from an array using Linear search
+
+/*
+#include <iostream>
+using namespace std;
+
+int main() {
+    // Find max element value in array 
+    int arr[5] = {1, 2, 3, 4, 50};
+    int size = sizeof(arr)/sizeof(int);
+
+    // Initialize max value with the first element of the array
+    int maxVal = arr[0];
+
+    // Iterate through the array to find the maximum value
+    for(int i = 1; i < size; i++) {
+        if(arr[i] > maxVal) {
+            maxVal = arr[i];
+        }
+    }
+
+    // Output the maximum value
+    cout << "MAX VALUE IS : " << maxVal << endl;
+
+    return 0;
+}
+*/
