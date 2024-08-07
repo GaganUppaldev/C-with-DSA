@@ -283,10 +283,45 @@ int main() {
     }
 }
 */
+//======================================================================================================================================
+//<OUESTION 8>
+//Inverted pyramind with numbers
+// It is correctly linked with above question number 7 and a minor change will provide this output on input 5
+/*
+1 2 3 4 5 
+1 2 3 4 
+1 2 3 
+1 2 
+1 
+*/
 
-    
+
+//<SOLUTION>
+
+/*
+#include <iostream>
+using namespace std;
+
+
+
+int main() {
+    int n;
+    cin>>n;
+
+    for(int x = n ; x>=1 ; x--){
+      
+        for(int j = 1 ; j<=x ; j++){ //here is small change
+            cout<<j<<" ";
+        }
+        cout<<endl;
+        
+    }
+}
+
+
+
+*/
  
-
 
 
    
