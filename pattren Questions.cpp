@@ -246,6 +246,44 @@ int main() {
         cout<<endl;
         a++;
     }
+
+
+//=====================================================================================================================================
+//<QUESTION 7>
+//Print  N half inverted pyramid using * ?
+//OUTPUT SOULD BE LIKE BELOW  ON GIVING INPUT 5
+/*
+
+* * * * * 
+* * * * 
+* * * 
+* * 
+* 
+ 
+
+*/
+//SOLUTION
+/*
+#include <iostream>
+using namespace std;
+
+
+
+int main() {
+    int n;
+    cin>>n;
+
+    for(int x = n ; x>=1 ; x--){
+      
+        for(int j = 1 ; j<=x ; j++){
+            cout<<"*"<<" ";
+        }
+        cout<<endl;
+        
+    }
+}
+*/
+
     
  
 
