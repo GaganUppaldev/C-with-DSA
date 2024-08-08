@@ -352,7 +352,51 @@ int main() {
     return 0;
 }
 */
+//=======================================================================================================================================
+//<Question 7> 
 
+//Finding Peak element in an array = {0,4,10,1}
+
+/*
+//peak element in mountain array
+#include <iostream>
+using namespace std;
+
+//to find peak element in mountain array
+int peakelement(int arr[],int size){
+    int start = 0;
+    int end = size-1;
+    
+
+    while(start<end){
+        int mid = start + (end-start)/2;
+        //compare
+        if(arr[mid]<arr[mid+1]){
+            start = mid+1;
+        }else{
+            end = mid;
+        }
+    }
+    
+    return start;
+    
+}
+
+int main() {
+   int arr[4] = {0,4,10,1};
+   int size = sizeof(arr)/sizeof(int);
+    
+    cout<<size<<endl;
+    
+     int peakIndex = peakelement(arr, size);
+    cout << "Peak element is at index " << peakIndex << " with value " << arr[peakIndex] << endl;
+
+  
+    
+}
+
+
+*/
 
 
 
