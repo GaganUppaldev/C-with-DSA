@@ -246,3 +246,59 @@ int main() {
     return 0;
 }
 */
+
+//======================================================================================================================================
+//<Question 5>
+//Find The value  of Key from using binary search and its index number also
+// Array = { 1,2,30,4,5} , key = 30
+
+/*
+#include <iostream>
+using namespace std;
+
+int main() {
+  int arr[5] = {1, 2, 30, 4, 5};
+  int size = sizeof(arr) / sizeof(int);
+  cout << "Array size: " << size << endl;
+
+  int key = 30; // value to search for
+  int start = 0;
+  int end = size - 1;
+
+  while (start <= end) {
+    int mid = (start + end) / 2;
+    cout << "Current mid index: " << mid << endl;
+
+    if (arr[mid] == key) {
+      cout << "Value " << key << " found at index " << mid << endl;
+      return 0;
+    } else if (arr[mid] < key) {
+      start = mid + 1;
+      cout << "Updating start to " << start << endl;
+    } else {
+      end = mid - 1;
+      cout << "Updating end to " << end << endl;
+    }
+  }
+
+  cout << "Value " << key << " not found in the array." << endl;
+  return 0;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
