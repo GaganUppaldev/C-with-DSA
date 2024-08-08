@@ -397,7 +397,53 @@ int main() {
 
 
 */
+//=======================================================================================================================================
+//<QUESTION 8>
+//Find Piovet element from an array
 
+/*
+#include<iostream>
+using namespace std;
+
+int findPivot(int arr[], int size) {
+    int start = 0, end = size - 1;
+
+    // If the array is not rotated
+    if (arr[start] <= arr[end]) {
+        return start;
+    }
+
+    while (start <= end) {
+        int mid = start + (end - start) / 2;
+
+        // Check if mid element is the pivot
+        if (mid < end && arr[mid] > arr[mid + 1]) {
+            return mid + 1;
+        }
+        if (mid > start && arr[mid] < arr[mid - 1]) {
+            return mid;
+        }
+
+        // Decide which half to choose for finding the pivot
+        if (arr[mid] >= arr[start]) {
+            start = mid + 1;
+        } else {
+            end = mid - 1;
+        }
+    }
+
+    return -1;
+}
+
+int main() {
+    int arr[5] = {7, 9, 1, 2, 3};
+    int size = sizeof(arr) / sizeof(int);
+
+    int pivotIndex = findPivot(arr, size);
+    cout << "Pivot index: " << pivotIndex << endl;
+    cout << "Pivot element: " << arr[pivotIndex] << endl;
+}
+*/
 
 
 
