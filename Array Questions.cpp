@@ -285,7 +285,73 @@ int main() {
   return 0;
 }
 */
+//=====================================================================================================================================
+//<Question 6>
+//Implement Binary Search to Find the Leftmost and Rightmost Occurrences of a Key in a Sorted Array
 
+/*
+#include <iostream>
+using namespace std;
+
+// Function to find the leftmost (first) occurrence of the key
+int findLeftmost(int arr[], int size, int key) {
+    int start = 0, end = size - 1;
+    int result = -1;
+
+    while (start <= end) {
+        int mid = start + (end - start) / 2; //we used it for safer calculation otherwisw simple mid = (start + end) / 2 was also valid
+
+        if (arr[mid] == key) {
+            result = mid;
+            end = mid - 1; // Move to the left half
+        } else if (arr[mid] > key) {
+            end = mid - 1;
+        } else {
+            start = mid + 1;
+        }
+    }
+
+    return result;
+}
+
+// Function to find the rightmost (last) occurrence of the key
+int findRightmost(int arr[], int size, int key) {
+    int start = 0, end = size - 1;
+    int result = -1;
+
+    while (start <= end) {
+        int mid = start + (end - start) / 2;
+
+        if (arr[mid] == key) {
+            result = mid;
+            start = mid + 1; // Move to the right half
+        } else if (arr[mid] > key) {
+            end = mid - 1;
+        } else {
+            start = mid + 1;
+        }
+    }
+
+    return result;
+}
+
+int main() {
+    int arr[8] = {1, 2, 2, 2, 3, 4, 5, 5};
+    int key = 2;
+    int size = sizeof(arr) / sizeof(arr[0]);
+
+    int leftmost = findLeftmost(arr, size, key);
+    int rightmost = findRightmost(arr, size, key);
+
+    if (leftmost != -1 && rightmost != -1) {
+        cout << "Element " << key << " found from index " << leftmost << " to index " << rightmost << endl;
+    } else {
+        cout << "Element " << key << " not found" << endl;
+    }
+
+    return 0;
+}
+*/
 
 
 
