@@ -18,6 +18,18 @@ int main () {
     for(int i :d){
         cout<<i<<" ";
     }
+
+    cout<<endl;
+
+    cout<<"print first element"<<d.at(1)<<endl;
+    
+
+    
+
+    
+    
+    
+}
     
 
     
