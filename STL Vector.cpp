@@ -34,6 +34,29 @@ int main () {
         cout<<i<<" ";
     }
 
+    cout<<endl;
+
+    //creating vector a
+     std::vector<int> a(5, 1);
+
+    for (int i = 0; i < a.size(); ++i) {
+        std::cout << a[i] << " ";
+    }
+    cout<<endl;
+
+    a.push_back(3);
+    for (int i = 0; i < a.size(); ++i) {
+        std::cout << a[i] << " ";
+    }
+    
+
+    
+
+    
+    
+    
+}
+
     
 
     
