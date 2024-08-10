@@ -58,7 +58,37 @@ int main() {
         cout << endl; // To print each row on a new line
     }
 
+    //intitaliztion of 2d array
+    int arr4[3][3] = {{10,2,3},{4,5,6},{7,8,9}};
+    // Print
+    
+    for (int i = 0;  i < 3; i++) {
+        for (int j = 0; j < 3; j ++) {
+            cout<<arr4[i][j] << " ";
+        }
+        cout << endl; // To print each row on a new line
+    }
+    
+        
+ 
 
     return 0;
 }
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+    
+ 
+
+
 
