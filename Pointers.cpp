@@ -138,7 +138,29 @@ int main() {
 }
 
 
+//====================================================================================================================================
+//Function with Pointers
+#include <iostream>
+using namespace std;
 
+int update(int *p){
+    *p = *p+1;
+  return 0;
+}
+
+
+
+int main() {
+    int value = 5;
+    int *p = &value;
+
+    //print p
+    cout<<*p<<endl;
+    update(p);
+    cout<<*p<<endl;
+    return 0 ;
+    
+}
 
 
 
