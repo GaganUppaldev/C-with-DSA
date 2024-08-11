@@ -161,6 +161,46 @@ int main() {
     return 0 ;
     
 }
+//This will exlaborate use Pointers with function and array , by using this we can send any part of array in function like below code
+#include <iostream>
+using namespace std;
+
+// Function to add 2 to elements starting from index 3
+void addTwoFromIndexThree(int arr[], int size) {
+    // Check if the array has at least 4 elements
+    if (size > 3) {
+        for (int i = 3; i < size; i++) {
+            arr[i] += 2;  // Add 2 to each element starting from index 3
+        }
+    } else {
+        cout << "Array does not have enough elements!" << endl;
+    }
+}
+
+int main() {
+    // Initialize an array with some elements
+    int arr[] = {1, 2, 3, 4, 5, 6, 7, 8};
+    int size = sizeof(arr) / sizeof(arr[0]);  // Calculate the size of the array
+
+    // Print the original array
+    cout << "Original array: ";
+    for (int i = 0; i < size; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+
+    // Call the function to add 2 to elements starting from index 3
+    addTwoFromIndexThree(arr, size);
+
+    // Print the modified array
+    cout << "Modified array: ";
+    for (int i = 0; i < size; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
 
 
 
