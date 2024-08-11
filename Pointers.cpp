@@ -79,6 +79,13 @@ int main() {
     cout<<sizeof(temp)<<endl;
     cout<<sizeof(*temp)<<endl; //size of element at 0 index
     cout<<sizeof(temp[0])<<endl;////size of element at 0 index
+
+
+    int t[10] = {1,2};
+    int *p  = &t[0];
+    cout<<*p<<endl;//value
+    cout<<p<<endl;//adress of t[0]
+    cout<<&p<<endl;//adress of pointer p
     
     
     
