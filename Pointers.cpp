@@ -47,3 +47,58 @@ int main() {
 //summary :
 ////adress got added or subtracted by 4 bytes
 //means size of adress will not be effected ay + or - it will remain 8
+
+//=======================================================================================================================================
+//Array with Pointers important points 
+#include <iostream>
+using namespace std;
+
+
+
+int main() {
+    //Array with pointers 
+    //adress of array is location of its element at 0 index
+
+    int arr[5] = {1,2,3,4,5};
+    cout<<arr<<endl;
+    cout<<&arr[0]<<endl;
+    cout<<&arr[1]<<endl; //adress 0f element at index 1
+    cout<<arr[1]<<endl;//value of element at index 1
+
+    //new approch
+    cout<<*(arr+3)<<endl; //value of element at index 3
+    cout<<*(arr)+3<<endl; //value of element at index 3
+    cout<<*arr+3<<endl; //value of element at index 3
+
+    //important location or formula
+    //arr[i]  = *(arr+i);
+    cout<<arr[2]<<endl;
+    cout<<*(arr+2)<<endl;
+
+    int temp[10] = {1,2};
+    cout<<sizeof(temp)<<endl;
+    cout<<sizeof(*temp)<<endl; //size of element at 0 index
+    cout<<sizeof(temp[0])<<endl;////size of element at 0 index
+    
+    
+    
+    
+
+
+
+       
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
