@@ -98,6 +98,45 @@ int main() {
     
 }
 
+//======================================================================================================================================
+//char Array and pointer
+
+#include <iostream>  // Include the input-output stream library
+using namespace std;  // Use the standard namespace
+
+int main() {
+    // Initialize a character array (string) with "abcd"
+    // The array size is 10, so "abcd" is stored as {'a', 'b', 'c', 'd', '\0', ...}
+    // with remaining elements filled with null terminators '\0'.
+    char value[10] = "abcd";
+
+    // Output the first character of the array, which is 'a'
+    cout << value[0] << endl;  // Output: a
+
+    // Output the entire string stored in the character array
+    // Since value is an array of characters, it automatically prints the string until it hits a null terminator '\0'
+    cout << value << endl;  // Output: abcd
+
+    // Output the address of the array
+    // &value gives the address of the array in memory
+    cout << &value << endl;  // Output: Memory address of 'value' array
+
+    // Pointer declaration
+    // char* ptr is a pointer that points to the first element of the array 'value'
+    char *ptr = value;
+
+    // Output the pointer, which actually prints the entire string starting from the address ptr is pointing to
+    cout << ptr << endl;  // Output: abcd
+
+    // Output the value pointed by the pointer (dereferencing)
+    // This will print the first character in the string that ptr points to, which is 'a'
+    cout << *ptr << endl;  // Output: a
+
+    // Output the address of the pointer itself
+    // &ptr gives the address where the pointer 'ptr' is stored in memory
+    cout << &ptr << endl;  // Output: Memory address of 'ptr' variable
+}
+
 
 
 
