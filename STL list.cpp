@@ -20,7 +20,11 @@ int main(){
     for(int i:l){
         cout<<i<<" ";
     }
+    cout<<endl;
+
+    cout<<"size of list is "<<l.size()<<endl;
 
     
     
 }
+
