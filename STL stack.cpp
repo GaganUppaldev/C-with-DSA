@@ -13,4 +13,8 @@ int main() {
     s.push("immortal");//last
 
     cout<<s.top()<<endl; //immortal is printed and note that it was last
+
+    //s.pop only removes the last element not delete the whole stack
+    s.pop();
+    cout<<s.top()<<endl; //are is printed and note that it was last
 }
