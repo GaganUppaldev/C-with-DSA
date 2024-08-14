@@ -12,6 +12,10 @@ int main() {
     s.push("immortal");//last
 
     cout<<s.front()<<endl;//ideas on front will be printed
+    s.pop();
+    cout<<s.front()<<endl;//are will be printed
+
+    cout<<s.size()<<endl;
 
 }
 
