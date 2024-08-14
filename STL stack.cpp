@@ -17,4 +17,7 @@ int main() {
     //s.pop only removes the last element not delete the whole stack
     s.pop();
     cout<<s.top()<<endl; //are is printed and note that it was last
+
+    //to watcht the size
+    cout<<s.size()<<endl; //2
 }
