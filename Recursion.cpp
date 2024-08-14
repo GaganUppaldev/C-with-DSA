@@ -1,6 +1,38 @@
 //Recursion is a way for a function to solve a problem by calling itself. It breaks down a big problem into smaller, similar problems until it reaches a simple case that can be solved directly
 //  Base case and relation is must for doing this and any processing could be a add on
 
+//Basic recursion < Find sum of number s till n number
+/*
+#include<iostream>
+using namespace std;
+
+// Recursive function to calculate the sum of first n natural numbers
+int test(int n) {
+    // Base case
+    if(n == 0) {
+        return 0;
+    }
+
+    // Recursive case: sum of n + sum of numbers from 1 to n-1
+    int sum = n + test(n - 1);
+
+    cout << "Current sum at n = " << n << ": " << sum << endl;
+
+    return sum;
+}
+
+int main() {
+    int n;
+    cout << "Enter a number: ";
+    cin >> n;
+
+    int final = test(n);
+    cout << "Final answer: " << final << endl;
+}
+
+
+*/
+
 #include <iostream>
 using namespace std;
 
