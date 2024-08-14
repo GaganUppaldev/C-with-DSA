@@ -20,4 +20,8 @@ int main() {
 
     //to watcht the size
     cout<<s.size()<<endl; //2
+
+    //to check if stack is empty
+    cout<<s.empty()<<endl; //0 means false and 1 means true 
 }
+
