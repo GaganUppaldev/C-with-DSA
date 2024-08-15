@@ -8,10 +8,10 @@
 using namespace std;
 
 
-class student{     //Created class
+class student{     //Created class named student
 
-public:
-int tenth;
+public:   //By default this was private means this tenth will not be accesed from outside the class
+int tenth; 
 
 
 
