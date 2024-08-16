@@ -75,5 +75,88 @@ int main() {
     return 0;
 }
 
+//======================================================================================================================================
+//Double linked list 
+#include <iostream>
+using namespace std;
+
+// Node class
+class Node {
+public:
+    int data;
+    Node* prev;
+    Node* next;
+
+    // Constructor
+    Node(int val) {
+        data = val;
+        prev = nullptr;
+        next = nullptr;
+    }
+};
+
+// Doubly Linked List class
+class DoublyLinkedList {
+private:
+    Node* head;
+
+public:
+    // Constructor
+    DoublyLinkedList() {
+        head = nullptr;
+    }
+
+    // Insert at the front
+    void insertFront(int val) {
+        Node* newNode = new Node(val);
+        if (head == nullptr) {
+            head = newNode;
+        } else {
+            newNode->next = head;
+            head->prev = newNode;
+            head = newNode;
+        }
+    }
+
+    // Insert at the end
+    void insertEnd(int val) {
+        Node* newNode = new Node(val);
+        if (head == nullptr) {
+            head = newNode;
+        } else {
+            Node* temp = head;
+            while (temp->next != nullptr) {
+                temp = temp->next;
+            }
+            temp->next = newNode;
+            newNode->prev = temp;
+        }
+    }
+
+    // Display the list
+    void display() {
+        Node* temp = head;
+        while (temp != nullptr) {
+            cout << temp->data << " ";
+            temp = temp->next;
+        }
+        cout << endl;
+    }
+};
+
+int main() {
+    DoublyLinkedList dll;
+
+    dll.insertFront(10);
+    dll.insertEnd(20);
+    dll.insertEnd(30);
+    dll.insertFront(5);
+
+    cout << "Doubly Linked List: ";
+    dll.display();
+
+    return 0;
+}
+
 
 
