@@ -76,6 +76,48 @@ int main() {
 }
 
 //======================================================================================================================================
+//Basic Double Linked list -:
+#include <iostream>
+using namespace std;
+
+class node {
+public:
+  int data;
+  node *next;
+  node *back;
+
+  //constructor 
+  node(int d){
+    this->data  = d;
+    this->next = nullptr;
+    this->back = nullptr;
+  }
+
+
+};
+
+
+
+//print function 
+
+int print(node* head){
+  node* temp = head;
+  if (temp != nullptr){
+    cout << temp->data << " ";
+    temp = temp->next;
+  }
+  return 0;
+}
+
+
+int main (){
+  node*  node1 = new node(10);
+  node * head = node1;
+
+  print(head);
+}
+
+//======================================================================================================================================
 //Double linked list 
 #include <iostream>
 using namespace std;
