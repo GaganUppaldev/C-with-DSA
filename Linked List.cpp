@@ -200,5 +200,68 @@ int main() {
     return 0;
 }
 
+//=====================================================================================================================================
+//Double linked list in easier way for beginner
+#include <iostream>
+using namespace std;
+class doublell{
+public:
+int data;
+doublell *prev;
+doublell *next;
+
+
+//constructor
+doublell(int value){
+    this->data = value;
+    this->prev = nullptr;
+    this->next = nullptr;
+    
+}
+
+};
+
+void print(doublell *node1){
+    doublell *current = node1;{
+        while(current != nullptr){
+            cout<<"||"<<current->data<<"";
+            cout<<current->next<<"-";
+            cout<<current->prev<<"-";
+            if(current->next == nullptr ||current->next == nullptr){
+                cout<<"Null"<<endl;
+
+                
+            }
+
+            current = current->next;
+        }
+    }
+    
+}
+
+int main(){
+    cout<<"double linked list"<<endl;
+
+    //creating a new node
+    doublell *node1 = new doublell(10);
+    doublell *node2 = new doublell(100);
+    doublell *node3 = new doublell(1000);
+
+    //linking nodes
+
+    node1->next = node2;
+    node2->prev = node1;
+
+    node2->next = node3;
+    node3->prev = node2;
+
+    
+    node3->next = nullptr;
+
+    print(node1);
+   
+    
+    
+}
 
 
