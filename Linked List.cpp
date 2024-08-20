@@ -259,6 +259,50 @@ int main(){
     node3->next = nullptr;
 
     print(node1);
+//=======================================================================================================================================
+//Circular linked list code for beginner to understand Basic
+
+
+
+#include <iostream>
+using namespace std;
+class circle{
+public:
+int data;
+circle *next;
+
+//constructor
+circle(int value) : data(value) , next(nullptr){};
+
+};
+
+//printing function
+void print(circle *node1){
+    circle  *temp = node1;
+    while(temp!=nullptr){
+        cout<<temp->data<<" |";
+        cout<<temp->next<<" | ";
+        temp = temp->next;
+    }
+    
+    
+}
+
+
+int main (){
+    cout<<"Circular single linked list "<<endl;
+    //creating node 
+    circle *node1 = new circle(10);
+    //linking a node
+    node1->next = node1;
+    node1->next = nullptr;
+
+    print(node1);
+    
+    delete node1;
+    
+}
+	
    
     
     
