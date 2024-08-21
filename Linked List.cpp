@@ -302,6 +302,57 @@ int main (){
     delete node1;
     
 }
+
+//====================================================================================================================================
+//Max concepts are over And here is nothing special
+//Make linked list with characters
+
+#include <iostream>
+using namespace std;
+class node{
+public:
+char data;
+node* next; //defined pointer named next
+
+//constructor
+
+node(char value) : data(value) , next(nullptr){}
+
+
+};
+
+void print(node *node1){
+  node *current = node1;
+  while(current != nullptr){
+    cout << current->data << "->";
+    current = current->next;
+  }
+  
+}
+
+/*void reverse(node *node1){
+  node *current = node1;
+}*/
+int main(){
+  cout<<"Main linked list"<<endl;
+  //creating node
+  node *node1 = new node('x');
+  node *node2 = new node('y');
+  node *node3 = new node('A');
+  node *node4 = new node('B');
+
+
+  
+
+  //linking nodes
+  node1->next = node2;
+  node2->next = node3;
+  node3->next = node4;
+  node4->next=nullptr;
+
+  print(node1);
+ 
+}
 	
    
     
