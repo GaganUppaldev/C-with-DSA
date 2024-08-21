@@ -78,3 +78,84 @@ while(current!=nullptr){
 //====================================================================================================================================================================================
 //<QUESTION 2> 
 //reverse the linked list kth Group
+//Recursion is need to solve this problem
+#include <iostream>
+using namespace std;
+
+class node {
+public:
+    char data;
+    node* next;
+
+    // Constructor
+    node(char value) : data(value), next(nullptr) {}
+};
+
+// Function to print the linked list
+void print(node *head) {
+    node *current = head;
+    while (current != nullptr) {
+        cout << current->data;
+        if (current->next != nullptr) cout << "->";
+        current = current->next;
+    }
+    cout << endl;
+}
+
+// Function to reverse a segment of k nodes
+node* reverseKGroup(node* head, int k) {
+    node *current = head;
+    node *prev = nullptr;
+    node *next = nullptr;
+    int count = 0;
+
+    // Check if there are at least k nodes left in the list
+    node *temp = head;
+    while (temp != nullptr && count < k) {
+        temp = temp->next;
+        count++;
+    }
+    if (count < k) return head; // If there are less than k nodes, no need to reverse
+
+    // Reverse k nodes
+    count = 0;
+    while (current != nullptr && count < k) {
+        next = current->next;
+        current->next = prev;
+        prev = current;
+        current = next;
+        count++;
+    }
+
+    // Recur for the remaining nodes
+    if (next != nullptr) {
+        head->next = reverseKGroup(next, k);
+    }
+
+    // Prev is the new head of the reversed segment
+    return prev;
+}
+
+int main() {
+    cout << "Main linked list" << endl;
+
+    // Creating nodes
+    node *node1 = new node('x');
+    node *node2 = new node('y');
+    node *node3 = new node('A');
+    node *node4 = new node('B');
+
+    // Linking nodes
+    node1->next = node2;
+    node2->next = node3;
+    node3->next = node4;
+    node4->next = nullptr;
+
+    print(node1);
+
+    cout << "Reversed linked list in groups of 2" << endl;
+    node* reversed = reverseKGroup(node1, 2);
+    print(reversed);
+
+    return 0;
+}
