@@ -62,11 +62,19 @@ int main (){
   print(reversedHead);
 
   return 0;
-  
-  
-
-
-
-  
-  
 }
+
+/*
+here i tried to explain each step logic
+while(current!=nullptr){
+    forward = current->next;//n1->n2 [n2] ,n2->n3 [n3]
+    current->next = prev; // [n2] = prev, [n3] = prev
+    prev = current; //prev = n1, prev = n2
+    current = forward; //n1->n2 = n2, n2->n3 = n3
+  }
+    return prev;
+*/
+
+//====================================================================================================================================================================================
+//<QUESTION 2> 
+//reverse the linked list kth Group
