@@ -28,7 +28,17 @@ void push(int value){
     top++;
     arr[top] = value;
     cout << value << " pushed into the stack" << endl;
-    
+
+  }
+}
+
+void pop(){
+  if(top == -1){
+    cout << "Stack is empty" << endl;
+  }else{
+    int popv = arr[top] ;
+    top--;
+    return popv;
   }
 }
 
@@ -37,6 +47,6 @@ void push(int value){
 
 int main(){
   cout<<"Implementation of stack using class : "<<endl;
-  
-  
+
+
 }
