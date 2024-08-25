@@ -176,4 +176,13 @@ int main(){
   return 0;
 }
 
+//=====================================================================================================================================
+//Final and complete binary tree
+//till now we only was only left to get binary tree in its orginal form to disalay , till now output is 2 1 4 but we want 
+/*
+2
+3  4
+*/
+//Sepraters will solve our problem so lets do it 
+
 
