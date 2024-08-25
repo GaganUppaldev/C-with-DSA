@@ -22,7 +22,15 @@ node(int key){
 
 };
 
-
+void preordertraversal(node* root){
+  if(root == nullptr){
+    return;
+  }
+  cout<<root->data<<" ";
+  preordertraversal(root->left);
+  preordertraversal(root->right);
+  
+}
 
 int main(){
 
@@ -37,5 +45,7 @@ int main(){
   first->right=third;
 
   second->left=forth;
-  return 0 ;
+  
+
+  preordertraversal(first);
 }
