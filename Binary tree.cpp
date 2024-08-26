@@ -280,3 +280,11 @@ int main(){
   return 0;
 }
 
+//====================================================================================================================================
+/*
+Types of travsals
+Inorder -->LNR (left , node , right)
+Preorder-->NLR (node , left , right)
+Post order-->LRN (left right node)
+
+*/
