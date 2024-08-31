@@ -23,5 +23,11 @@ int main(){
   
   m["test"] = 30;
   cout<<m["test"]<<endl; //output will be 3
+
+  //check at specific key
+  cout<<m.at("Mumbai")<<endl; //output will be 2
+
+  //check size 
+  cout<<m.size()<<endl;
     
 }
