@@ -20,7 +20,7 @@ int main(){
   m["test"] = 20;
   cout<<m["test"]<<endl; //output will be 2
 
-  
+
   m["test"] = 30;
   cout<<m["test"]<<endl; //output will be 3
 
@@ -29,5 +29,9 @@ int main(){
 
   //check size 
   cout<<m.size()<<endl;
-    
+
+  //unknown key
+  cout<<m["unknown"]<<endl;//output will be 0
+  cout<<m.at("unknown")<<endl;//output will be 0
+
 }
