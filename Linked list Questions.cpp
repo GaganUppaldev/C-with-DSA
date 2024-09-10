@@ -159,3 +159,129 @@ int main() {
 
     return 0;
 }
+
+//<QUESTION 3>
+//Create two linked by getting input than add them in this way 1st element of 1st linked list with 1st element of second linked list  
+//Linked list 1 = 5 , 4 ,3
+//Linked list 2 = 5 ,4, 3
+//output  = 0 9 6 
+
+//important point is be aware about how we calculate in maths like first elements got added first
+
+#include <iostream>
+using namespace std;
+
+class list {
+public:
+int data;
+list *next;
+
+//getting value inside list
+
+list(int value) : data(value) , next(nullptr) {}
+
+};
+
+void printlist(list *head){
+   list *current = head;
+   while(current!=nullptr){
+      
+      cout<<current->data<<"->";
+
+      current = current->next;
+      
+      
+   }
+   cout<<"nullptr"<<endl;
+}
+
+void sum(list *head, list* head2) {
+    list *current = head;
+    list *current2 = head2;
+    int carry = 0;  // Variable to hold the carry value
+
+    while (current != nullptr || current2 != nullptr || carry != 0) {
+        int sum = carry;  // Start with carry from previous step
+
+        if (current != nullptr) {
+            sum += current->data;  // Add current node's data from first list
+            current = current->next;
+        }
+
+        if (current2 != nullptr) {
+            sum += current2->data;  // Add current node's data from second list
+            current2 = current2->next;
+        }
+
+        carry = sum / 10;  // Calculate carry for the next iteration
+        int digit = sum % 10;  // Extract the digit to be printed
+
+        cout << digit << "->";  // Print the result of the sum
+    }
+
+    cout << "nullptr" << endl;  // Indicate the end of the linked list
+}
+
+
+
+int main(){ 
+   cout<<"linked list 1"<<endl;
+   //putting value inside list
+
+   cout<<"head element"<<endl;
+   int x;
+   cin>> x;
+
+   cout<<"first element"<<endl;
+   int y;
+   cin>> y;
+
+   cout<<"second element"<<endl;
+   int z;
+   cin>> z;
+
+   list *head = new list(x);
+   list *first = new list(y);
+   list *second= new list(z);
+
+   head->next = first;
+   first->next = second;
+   second -> next = nullptr;
+   
+
+   printlist(head);
+
+   cout<<endl;
+
+   cout<<"linked list 2"<<endl;
+   
+   cout<<"head element"<<endl;
+   int a;
+   cin>> a;
+
+   cout<<"first element"<<endl;
+   int b;
+   cin>> b;
+
+   cout<<"second element"<<endl;
+   int c;
+   cin>> c;
+   list *head2 = new list(a);
+   list *first2 = new list(b);
+   list *second2 = new list(c);
+
+   head2->next = first2;
+   first2->next = second2;
+   second2->next = nullptr;
+
+   printlist(head2);
+
+   cout<<endl;
+   cout<<"final sum list"<<endl;
+   sum(head , head2);
+
+   
+
+
+   
+}
