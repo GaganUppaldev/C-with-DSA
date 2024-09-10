@@ -222,6 +222,15 @@ void sum(list *head, list* head2) {
     cout << "nullptr" << endl;  // Indicate the end of the linked list
 }
 
+void deleteList(list* &head) {
+    while (head != nullptr) {
+        list* temp = head;  
+        head = head->next;  
+        delete temp;       
+    }
+}
+
+
 
 
 int main(){ 
@@ -281,7 +290,12 @@ int main(){
    sum(head , head2);
 
    
+   deleteList(head);
+   deleteList(head2);
+
+   
 
 
    
 }
+      
