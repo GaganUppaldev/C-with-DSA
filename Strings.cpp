@@ -36,3 +36,34 @@ int main() {
 
     return 0;
 }
+
+/*
+#include <iostream>
+#include <QString>
+
+
+    QString greeting = "Hello";
+
+    greeting.append(", World!");
+
+
+    std::cout << "Greeting: " << greeting.toStdString() << std::endl;
+
+    int length = greeting.length();
+    std::cout << "Length of the greeting: " << length << std::endl;
+
+ 
+    QChar firstChar = greeting.at(0);
+    std::cout << "First character: " << firstChar.toLatin1() << std::endl;
+
+
+    std::string stdString = greeting.toStdString();
+    std::cout << "Converted to std::string: " << stdString << std::endl;
+
+    
+    if (greeting.contains("World")) {
+        std::cout << "The greeting contains 'World'." << std::endl;
+    }
+
+    return 0;
+}*/
