@@ -443,10 +443,74 @@ int main() {
     cout << "Pivot index: " << pivotIndex << endl;
     cout << "Pivot element: " << arr[pivotIndex] << endl;
 }
+//========================================================================================================================
+
+//Dutch flag problem
+/*
+#include <iostream>
+#include <vector>
+using namespace std;
+
+typedef enum { RED, WHITE, BLUE } color;
+
+void Dutchflag(int pv_index, vector<color>* A_ptr) {
+    vector<color>& A = *A_ptr;  // Reference to the vector
+    color pivot = A[pv_index];  // Get the pivot color
+
+    // First group: move all elements less than pivot
+    for (int i = 0; i < A.size(); ++i) {
+        for (int j = i + 1; j < A.size(); ++j) {
+            if (A[j] < pivot) {
+                swap(A[i], A[j]);
+                break;
+            }
+        }
+    }
+
+    // Second group: move all elements greater than pivot
+    for (int i = A.size() - 1; i >= 0 && A[i] >= pivot; --i) {
+        for (int j = i - 1; j >= 0; --j) {
+            if (A[i] > pivot) {
+                swap(A[i], A[j]);
+                break;
+            }
+        }
+    }
+}
+
+void printColors(const vector<color>& colors) {
+    for (color c : colors) {
+        switch (c) {
+            case RED: cout << "RED "; break;
+            case WHITE: cout << "WHITE "; break;
+            case BLUE: cout << "BLUE "; break;
+        }
+    }
+    cout << endl;
+}
+
+int main() {
+    cout << "Dutch National Flag Problem" << endl;
+
+    // Initialize the vector with colors
+    vector<color> colors = { RED, WHITE, BLUE, WHITE, RED, BLUE, RED };
+
+    cout << "Original colors: ";
+    printColors(colors);
+
+    // Set pivot index (for example, we can choose the first element)
+    int pivotIndex = 0; // Choosing RED as the pivot
+
+    // Call the Dutchflag function
+    Dutchflag(pivotIndex, &colors);
+
+    // Print the sorted colors
+    cout << "Sorted colors: ";
+    printColors(colors);
+
+    return 0;
+}
 */
-
-
-
 
 
 
