@@ -562,6 +562,54 @@ int main() {
     return 0;
 }
 
+===============================================New way but with time complexity O(n)===============================
+#include <iostream>
+#include <vector>
+using namespace std;
+
+typedef enum { RED, WHITE, BLUE } color;
+
+void dutchFlagSort(int mid, vector<color>* A_ptr) {
+    vector<color>& A = *A_ptr;
+    int pivot = A[mid];
+
+    int smaller = 0, equal = 0, larger = A.size();
+
+    // Keep iterating as long as there is an unclassified element
+    while (equal < larger) {
+        if (A[equal] < pivot) {
+            swap(A[smaller++], A[equal++]);
+        } else if (A[equal] == pivot) {
+            ++equal;
+        } else {  // A[equal] > pivot
+            swap(A[equal], A[--larger]);
+        }
+    }
+}
+
+void printColors(const vector<color>& A) {
+    for (color c : A) {
+        switch (c) {
+            case RED: cout << "RED "; break;
+            case WHITE: cout << "WHITE "; break;
+            case BLUE: cout << "BLUE "; break;
+        }
+    }
+    cout << endl;
+}
+
+int main() {
+    cout << "Dutch Flag Problem" << endl;
+
+    vector<color> A = {RED, WHITE, BLUE, BLUE, RED, WHITE, BLUE};
+
+    dutchFlagSort(1, &A); // 1 is the pivot index for WHITE
+
+    printColors(A); // Print the sorted array
+
+    return 0;
+}
+
 */
 
 
