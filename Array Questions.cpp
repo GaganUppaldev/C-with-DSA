@@ -510,6 +510,58 @@ int main() {
 
     return 0;
 }
+==========================SOLVED WITH log(n) time complexity==========================================================
+//time complexity 0(n) now
+#include <iostream>
+#include <vector>
+using namespace std;
+
+typedef enum {RED, WHITE, BLUE} color;
+
+void sol(int mid, vector<color>* A_ptr) {
+    vector<color>& A = *A_ptr;  // A is a reference to the vector
+    color pivot = A[mid];       // WHITE
+
+    // First pass
+    int smaller = 0;
+    for (int i = 0; i < A.size(); i++) { 
+        if (A[i] < pivot) {          
+            swap(A[i], A[smaller++]);
+        }
+    }
+
+    // Second pass
+    int larger = A.size() - 1;
+    for (int i = A.size() - 1; i >= 0; --i) {
+        if (A[i] > pivot) {               
+            swap(A[i], A[larger--]);
+        }
+    }
+}
+
+void printColors(const vector<color>& A) {
+    for (color c : A) {
+        switch (c) {
+            case RED: cout << "RED "; break;
+            case BLUE: cout << "BLUE "; break;
+            case WHITE: cout << "WHITE "; break;
+        }
+    }
+    cout << endl;
+}
+
+int main() {
+    cout << "Improved time complexity of Dutch National Flag" << endl;
+
+    vector<color> A = {RED, WHITE, BLUE, BLUE, RED, WHITE, BLUE};
+
+    sol(1, &A); 
+
+    printColors(A);
+
+    return 0;
+}
+
 */
 
 
