@@ -612,6 +612,50 @@ int main() {
 
 */
 
+/*
+#include <iostream>
+#include <vector>
+using namespace std;
+
+vector<int> Multiply(vector<int> num1, vector<int> num2) {
+    int sign = (num1[0] < 0 ^ num2[0] < 0) ? -1 : 1;
+    num1[0] = abs(num1[0]);
+    num2[0] = abs(num2[0]);
+    vector<int> result(num1.size() + num2.size(), 0);
+    
+    for (int i = num1.size() - 1; i >= 0; --i) {
+        for (int j = num2.size() - 1; j >= 0; --j) {
+            result[i + j + 1] += num1[i] * num2[j];
+            result[i + j] += result[i + j + 1] / 10;
+            result[i + j + 1] %= 10;
+        }
+    }
+
+    while (result.size() > 1 && result[0] == 0) {
+        result.erase(result.begin());
+    }
+
+    if (sign == -1) {
+        result[0] *= -1;
+    }
+
+    return result;
+}
+
+int main() {
+    vector<int> num1 = {4, 3};  // 43
+    vector<int> num2 = {6, 5};  // 65
+    vector<int> result = Multiply(num1, num2);
+    
+    for (int digit : result) {
+        cout << digit;
+    }
+    cout << endl;
+
+    return 0;
+}
+
+*/
 
 
 
