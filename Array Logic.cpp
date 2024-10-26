@@ -65,3 +65,58 @@ int main() {
     return 0;
 }
 */
+//=======================================================================================================================
+//Removing dublicate numbers from an array and making them 0 then shifting to end of an an array 
+/*
+#include <iostream>
+using namespace std;
+
+int change(int arr[], int size) { 
+    // Step 1: Remove duplicates by setting them to 0
+    for (int i = 0; i < size; i++) {
+        for (int j = i + 1; j < size; j++) {
+            if (arr[i] == arr[j]) {
+                arr[j] = 0;  // Set duplicate element to 0
+            }
+        }
+    }
+
+    // Step 2: Shift non-zero elements to the left
+    int index = 0;  // This will track the position to place the next non-zero element
+    for (int i = 0; i < size; i++) {
+        if (arr[i] != 0) {
+            arr[index] = arr[i];  // Move non-zero element to the left
+            index++;
+        }
+    }
+
+    // Fill remaining part of the array with 0
+    while (index < size) {
+        arr[index] = 0;
+        index++;
+    }
+
+    return 0;
+}
+
+int print(int arr[], int size) {
+    for (int i = 0; i < size; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+    return 0;
+}
+
+int main() {
+    cout << "Before change:" << endl;
+    int arr[5] = {0, 1, 0, 3, 5};
+    int size = 5;
+    print(arr, size);
+
+    change(arr, size);  
+
+    cout << "After change:" << endl;
+    print(arr, size);  
+
+    return 0;
+}*/
