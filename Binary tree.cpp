@@ -288,3 +288,24 @@ Preorder-->NLR (node , left , right)
 Post order-->LRN (left right node)
 
 */
+
+// =============================BASIC BINARY TREE REVISION ==============================================================
+#include <iostream>
+using namespace std ;
+class tree {
+    public:
+    int data ;
+    tree* left;
+    tree* right;
+    
+    //constructor 
+    tree (int value){
+        data = value ;
+        left = nullptr ;
+        right = nullptr ;
+        
+    }
+};
+    int main () {
+    cout << "Basic Binary tree " << endl ;
+}
