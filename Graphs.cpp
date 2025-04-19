@@ -60,3 +60,59 @@ int main(){
    //printing graph
    g.printAdj();
 }
+
+
+
+//=============================================================================================================================================================
+#include <iostream>
+#include <vector>
+using namespace std;
+// Create a graph with n nodes
+   class Graph {
+public:
+    int V; // Number of vertices
+    vector<vector<int>> adjList; // Adjacency list
+
+    // Constructor
+    Graph(int vertices) {
+        V = vertices;
+        adjList.resize(V);
+    }
+
+    // Add edge (undirected)
+    void addEdge(int u, int v) {
+        adjList[u].push_back(v);
+        adjList[v].push_back(u); // comment this if it's a directed graph
+    }
+
+    // Print the graph
+    void printGraph() {
+        for (int i = 0; i < V; i++) {
+            cout << "Node " << i << ": ";
+            for (int neighbor : adjList[i]) {
+                cout << neighbor << " ";
+            }
+            cout << endl;
+        }
+    }
+};
+
+int main() {
+    cout << "--- Graph ---" << endl;
+
+    Graph g(5); // 5 nodes: 0 to 4
+
+    // Add some edges
+    g.addEdge(0, 1);
+    g.addEdge(0, 2);
+    g.addEdge(1, 3);
+    g.addEdge(1, 4);
+
+    // Print the graph
+    g.printGraph();
+
+    return 0;
+}
+
+
+//=============================================================================================================================================================
