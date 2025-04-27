@@ -155,3 +155,53 @@ int main() {
     return 0;
 }
 */
+//====================================================================Breadth First Search ========================================
+/*
+
+#include<iostream>
+#include<vector>
+#include<queue>
+using namespace std;
+
+void Graphs(vector<vector<int>>& adj , int u , int x ){
+    adj[u].push_back(x);
+    adj[x].push_back(u);
+}
+
+void bfs(const vector<vector<int>>& adj , int start, int v ){
+    vector<bool> visited(v, false);
+    queue<int> q;
+    
+    q.push(start);
+    visited[start] = true; // Mark the start node as visited
+    
+    while(!q.empty()){
+        int node = q.front();
+        q.pop();
+        cout << node << " ";
+        
+        for(int neighbour : adj[node]){
+            if(!visited[neighbour]){
+                visited[neighbour] = true;
+                q.push(neighbour);
+            }
+        }
+    }
+}
+
+int main () {
+    cout << "Graphs" << endl;
+    
+    int v = 5;
+    vector<vector<int>> adj(v);
+    
+    Graphs(adj, 0, 1);
+    Graphs(adj, 0, 2);
+    Graphs(adj, 1, 3);
+    Graphs(adj, 1, 4);
+    
+    bfs(adj, 0, v); // Call BFS starting from node 0
+}
+
+
+*/
