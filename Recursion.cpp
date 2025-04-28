@@ -95,5 +95,25 @@ int main() {
 
 }
 */
+//==================================================================== SUM OF N NUMBER OF NATURAL NUMBERS ===============================
 
+/*
+#include <iostream>
+using namespace std ;
+
+int sum(int n ){
+    
+    if(n == 1 ) return 1;
+    
+    return n + sum(n-1);
+}
+int main (){
+    
+    cout << "By recursion find sum natural numbers n" << endl;
+    
+    cout << sum(5) << endl;
+    
+    
+}
+*/
     
